@@ -2,9 +2,18 @@
 
 import sys
 
+def get_args():
+    i = 1
+    my_arg = []
+    while(i < len(sys.argv)):
+        my_arg.append(sys.argv[i])
+        i += 1
+    return my_arg
 
 
 def main():
-    print("lol")
+    args = get_args()
+    print(args[0])
+    
 
 main()
