@@ -13,6 +13,10 @@ def get_args():
 
 def main():
     args = get_args()
+    addon.chech_date(args[1])
+    if (args[0] != "-m" and args[0] != "-f" and args[0] != "-h"):
+        print("Bad Argument, use -h for help")
+        exit(84)
     if (args[0] == "-h"):
         addon.help()
     else:
