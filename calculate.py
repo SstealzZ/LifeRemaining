@@ -65,4 +65,7 @@ def get_years_remaining(opt, value):
     c = dd - db
     return (int(c.days / 365))
 
-    
+def get_life_used(opt, value):
+    total = get_days_alive(value) + get_days_remaining(opt, value)
+    result = (get_days_alive(value) * 100) / total
+    return (float(result))
